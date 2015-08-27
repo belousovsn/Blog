@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/button'
+
   devise_for :users
   get 'tags/:tag', to: 'posts#index', as: :tag
   resources :posts, path: ''
